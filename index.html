@@ -1,18 +1,2 @@
-<script>
-var playing=true;
-alert("Helo. Welcome to The Number Guessing Game! Please, choose a number between 1 to 100 to play the game.")
-var max=100;
-var min=1;
-while (playing) {
-  let average=Math.floor((max+min)/2);
-  let guess=prompt("Is your number " + average + "? Please, respond by entering either >, <, or yes.");
-  if (guess === ">") {
-    min = average;
-    } else if (guess === "<") {
-      max = average;
-      } else if (guess === "yes") {
-        alert("WhooHoo! The correct number has been guessed. Do you want to play again? Please, restart the game or click on close!")
-         playing=false;
-     }   
- }
-</script> 
+Hello, world!
+This is a test
