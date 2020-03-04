@@ -1,1 +1,26 @@
+<script>
 
+let str=prompt ("Enter Text")
+let shift=prompt ("Enter Shift")
+let newstr= " "
+
+for(let i=0;i<str.length;i++){
+let letterCode=str.charCodeAt(i);
+if (shift>26){
+shift=shift%26
+}
+
+if (letterCode<65){
+letterCode += 26;
+} else if (letterCode>90) {
+letterCode += -26;
+}
+
+letterCode += Number(shift);
+let newLetter=String.fromCharCode(letterCode);
+newstr += newLetter;
+}
+
+alert(newstr)
+
+</script>
