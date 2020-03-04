@@ -6,13 +6,11 @@ let newstr= " "
 
 const letterCeasar=function(code, value1, value2) {
 if (code <= value1)
-  code +=26;
+  code += 26;
   else if(code >= value2)
     code -= 26;
 return code;
 }
-
-
 
 for(let i=0; i<str.length; i++){
 let letterCode=str.charCodeAt(i);
@@ -24,8 +22,7 @@ if (letterCode >= 65 && letterCode <= 90){
   let code =letterCeasar(letterCode,65,90);
 }
 
-
-if (letterCode>=97 && letterCode<=122){
+if (letterCode >= 97 && letterCode <= 122){
   let code =letterCeasar(letterCode,97,122);
 }
 
