@@ -4,7 +4,7 @@ let shift=prompt ("Enter Shift")
 let str=prompt ("Enter Text")
 let newstr= " "
 
-const letter=function(code, value1, value2) {
+const letterCeasar=function(code, value1, value2) {
 if (code <= value1)
   code +=26;
   else if(code >= value2)
@@ -21,12 +21,12 @@ if (shift>26){
 }
 
 if (letterCode <=65 && letterCode >=90){
-  code =letter(letterCode,65,90);
+  code =letterCeasar(letterCode,65,90);
 }
 
 
 if (letterCode>=97 && letterCode<=122){
-  code =letter(letterCode,97,122);
+  code =letterCeasar(letterCode,97,122);
 }
 
 letterCode += Number(shift);
