@@ -4,22 +4,29 @@ let shift=prompt ("Enter Shift")
 let str=prompt ("Enter Text")
 let newstr= " "
 
-for(let i=0;i<str.length;i++){
+const letter=function(code, value1, value2) {
+if (code <= value1)
+  code +=26;
+  else if(code >= value2)
+    code -= 26;
+    return code;
+}
+
+
+
+for(let i=0; i<str.length; i++){
 let letterCode=str.charCodeAt(i);
 if (shift>26){
 shift=shift%26
 }
 
-if (letterCode<=65){
-letterCode += 26;
-} else if (letterCode>=90) {
-letterCode -= 26;
+if (letterCode<=65 &&>=90){
+  code =letter(letterCode,65,90)
 }
 
-if (letterCode>=97){
-letterCode += 26;
-} else if (letterCode<=122) {
-letterCode -= 26;
+
+if (letterCode>=97 && <=122){
+  code =letter(letterCode,97,122)
 }
 
 letterCode += Number(shift);
