@@ -1,38 +1,53 @@
-let prep = {
-"in": 1,
-"from": 2,
-"at": 3,
+<script>
+let quiz = [
+  [0, "Our world was shutdown _____ March.", "in"],
+  [1, "They will put you _____ the list.", "on"],
+  [2, "Can I pay _____ check?", "by"],
+  [3, "Thanks _____ the support.", "for"],
+  [4, "Let's get something _____ eat.", "to"],
+  [5, "The virus will be controlled _____ July 1st.", "on"],
+  [6, "Please, don't forget _____ smile.", "to"],
+  [7, "Send it _____ mail.", "by"],
+  [8, "Believe _____ yourself.", "in"],
+  [9, "Swimming is fun _____ her.", "for"],
+  [10, "Professors at ISU will teach face _____ face classes next year.", "to"],
+  [11, "Please, keep _____ touch.", "in"],
+  [12, "She wants _____ be a designer.", "to"],
+  [13, "Her name was _____ the box.", "on"],
+  [14, "Smoking is bad _____ them.", "for"],
+  [15, "_____ October, I should have dropped my quarantine weight gain.", "By"],
+  [16, "I was _____ the wrong floor.", "on"],
+  [17, "The dog _____ door kept barking all night.", "next"],
+  [18, "No one is too old _____ learn.", "to"],
+  [19, "I ate lunch _____ a hurry.", "in"],
+  [20, "_____ now, I will do my best to stay healthy and calm.", "For"],
+  [21, "May I sit _____ to you?", "next"],
+  [22, "She lives _____ herself.", "by"],
+  [23, "I am free _____ Sundays.", "on"],
+  [24, "The couple _____ door are fighting again.", "next"],
+  [25, "I will fly _____ my home country next month.", "next"],
+  [26, "It is time _____ us to study.", "for"],
+  [27, "I work _____ a bank.", "in"],
+  [28, "She sat _____ to him on the bus.", "next"],
+  [29, "He got hit _____ a car.", "by"],
+  ];
+
+
+let answer;
+
+let response;
+
+let score;
+
+for (let i = 0; i < quiz.length; i += 1) {
+  answer = prompt(quiz[i][1]);
+  response = answer.toLowerCase();
+  score = 1;
+  if (response === quiz[i][2]){
+    alert('You chose the correct preposition :) YAAAY!');
+  } else {
+    alert('You chose the wrong preposition :| OPSSS!');
+  }
 }
 
-let valueprep = "in";
-for (keyvalue[k] in prep)
-if prep [valueprep
-
-alert (valueprep)
-
-use just one loope
-
-let score= {"at": [1], "with":[2],
-const prep= {"at": [
-"I am at the mall",
-],
-"with": 
-
-
- if (scores === "x") {
-    x = correct
-  } else if (scores === "y") {
-   x = incorrect
-   
-   
-   worsePrep= "in" 
-   prep.score={"in": 5,
-   "of": -3};
-   
-   
-   let score={("with":1, "in":2, "for":3)
-           let worst="at";
-           for (let k in scores)
-           if scores [k] < worst [k]{
-           worst=scores [k];
-          }
+</script>
