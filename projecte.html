@@ -1,0 +1,60 @@
+<p>Input Box:<br><textarea id="Input Box" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Results:<br><textarea id="Results" rows="10" cols="80"></textarea>
+
+<script>
+  
+alert("Welcome to the corpus world! Please, type your text in the input box to know about the frequency, types, tokens, and type-token ratio of words that you have written.");
+let print = [];
+let occurrence = {};
+  
+function process() {
+  let x = document.getElementById("Input Box").value;
+  let allWords = x;
+  let TW = allWords.split(/\W+/);
+  console.log(TW);
+  let TYP = 0;
+  let TKN = 0;
+    
+for (let i = 0; i < TW.length; i++) {
+  let word = TW[i].toUpperCase();
+  
+  if (!/\d+/.test(word)) {
+    if (occurrence[word] == undefined) {
+      occurrence[word] = 1;
+      print.push(word);
+      TYP += 1;
+      TKN += 1;
+    } else {
+      occurrence[word] = occurrence[word] + 1;
+      TKN += 1;
+      }
+    }
+  }
+  
+print.sort(compare);   
+function compare(x, y) {
+  let countX = occurrence[x];
+  let countY = occurrence[y];
+  return countY - countX;
+}
+    
+  let TTR = TYP / TKN;
+
+  let y =
+    "Number of Tokens: " + TKN +
+    ". Number of Types: " + TYP +
+    ". Type-Token Ratio: " + TTR.toFixed(2) +
+    ". Words Sorted by Frequency from Most to Least: " + print + "\n";
+      
+for (let i = 0; i < print.length; i++) {
+  let click = print[i];
+  y += click + " " + occurrence[click] + "\n";
+}
+    
+  document.getElementById("Results").value = y;
+}
+
+</script>
+
+</p>
